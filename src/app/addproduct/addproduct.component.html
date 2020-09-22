@@ -1,35 +1,35 @@
 <div class="container">
-<form #adduserform="ngForm" (ngSubmit)="addproductformsubmit()">
+  <form #adduserform="ngForm" (ngSubmit)="addproductformsubmit()">
     <!-- <div class="form-group">
       <label for="id">id:</label>
       <input type="text" class="form-control" required [(ngModel)]="book.id" name="id">
     </div> -->
     <div class="form-group">
-        <label for="name">name:</label>
-        <input type="text" class="form-control" required [(ngModel)]="book.bookName" name="name">
-      </div>
-      <div class="form-group">
-        <label for="author">author:</label>
-        <input type="text" class="form-control" required [(ngModel)]="book.bookAuthor" name="author">
-      </div>
-      <div class="form-group">
-        <label for="edition">edition:</label>
-        <input type="text" class="form-control" required [(ngModel)]="book.bookEdition" name="edition">
-      </div>
-      <div class="form-group">
-        <label for="price">price:</label>
-        <input type="text" class="form-control" required [(ngModel)]="book.bookPrice" name="price">
-      </div>
-      <div class="form-group">
-        <label for="description">description:</label>
-        <input type="text" class="form-control" required [(ngModel)]="book.bookDescription" name="description">
-      </div>
-      <div class="form-group">
+      <label for="name">name:</label>
+      <input type="text" class="form-control" required [(ngModel)]="book.bookName" name="name">
+    </div>
+    <div class="form-group">
+      <label for="author">author:</label>
+      <input type="text" class="form-control" required [(ngModel)]="book.bookAuthor" name="author">
+    </div>
+    <div class="form-group">
+      <label for="edition">edition:</label>
+      <input type="text" class="form-control" required [(ngModel)]="book.bookEdition" name="edition">
+    </div>
+    <div class="form-group">
+      <label for="price">price:</label>
+      <input type="text" class="form-control" required [(ngModel)]="book.bookPrice" name="price">
+    </div>
+    <div class="form-group">
+      <label for="description">description:</label>
+      <input type="text" class="form-control" required [(ngModel)]="book.bookDescription" name="description">
+    </div>
+    <!-- <div class="form-group">
         <label for="category">category:</label>
         <input type="text" class="form-control" required [(ngModel)]="book.bookCategory" name="category">
-      </div>
+      </div> -->
 
-      <!-- <div class="btn-group">
+    <!-- <div class="btn-group">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           category of book
         </button>
@@ -40,8 +40,8 @@
          
         </div>
       </div> -->
-     
-      <!-- <div class="dropdown">
+
+    <!-- <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button"  [(ngModel)]="book.bookCategory"  name="category"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           category:
         </button>
@@ -52,28 +52,30 @@
         </div>
       </div> -->
 
+    <select (change)="selectCat($event.target.value)">
+      <option>Select Cat</option>
+      <option *ngFor="let catOpt of options" value={{catOpt}}>{{catOpt}}</option>
+    </select>
 
+ <!--  $event means how ill it get sir? $event it will store the action details for the entire selected it consider as a event.. form that event i getting the value is it clear?
+(change) means when ever the changes are made this is called event.... like (click) event... click is also event.. like change is also event... when ever the the changes are happen it call the respective method
+ -->
 
+    <div class="form-group">
+      <label for="quantity">quantity:</label>
+      <input type="text" class="form-control" required [(ngModel)]="book.bookQuantity" name="quantity">
+    </div>
+    <div class="form-group">
+      <label for="qualityrating">qualityrating:</label>
+      <input type="text" class="form-control" required [(ngModel)]="book.bookQualityRating" name="qualityrating">
+    </div>
+    <div class="form-group">
+      <label for="contentrating">contentrating:</label>
+      <input type="text" class="form-control" required [(ngModel)]="book.bookContentRating" name="contentrating">
+    </div>
 
-
-
-
-
-      <div class="form-group">
-        <label for="quantity">quantity:</label>
-        <input type="text" class="form-control" required [(ngModel)]="book.bookQuantity" name="quantity">
-      </div>
-      <div class="form-group">
-        <label for="qualityrating">qualityrating:</label>
-        <input type="text" class="form-control" required [(ngModel)]="book.bookQualityRating" name="qualityrating">
-      </div>
-      <div class="form-group">
-        <label for="contentrating">contentrating:</label>
-        <input type="text" class="form-control" required [(ngModel)]="book.bookContentRating" name="contentrating">
-      </div>
-   
 
     <button type="submit" class="btn btn-success">Submit</button>
-    <button type="back" class="btn btn-primary" [routerLink]="['/productlist']" >Back</button>
+    <button type="back" class="btn btn-primary" [routerLink]="['/productlist']">Back</button>
   </form>
 </div>
