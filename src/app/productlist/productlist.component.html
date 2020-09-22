@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Book List</h2>
+    <p>Use action to perform crud operations</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>book id</th>
+          <th>book name</th>
+          <th>book author</th>
+          <th>book edition</th>
+          <th>book price</th>
+          <th>book description</th>
+          <th>book category</th>
+          <th>book quantity</th>
+          <th>book quality rating</th>
+          <th>book content rating</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of booklist">
+          <td>{{book.id}}</td>
+          <td>{{book.bookName}}</td>
+          <td>{{book.bookAuthor}}</td>
+          <td>{{book.bookEdition}}</td>
+          <td>{{book.bookPrice}}</td>
+          <td>{{book.bookDescription}}</td>
+          <td>{{book.bookCategory}}</td>
+          <td>{{book.bookQuantity}}</td>
+          <td>{{book.bookQualityRating}}</td>
+          <td>{{book.bookContentRating}}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="goToEditProduct(book.id)">Edit</button>
+            <button type="button" class="btn btn-info" (click)="goToViewProduct(book.id)">View</button>
+            <button type="button" class="btn btn-danger"(click)="deleteProduct(book.id)">Delete</button>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-success" [routerLink]="['/addproduct']" >Add New Product</button>
+  </div>

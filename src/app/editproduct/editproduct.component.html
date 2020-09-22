@@ -1,0 +1,48 @@
+<div class="container">
+    <form #adduserform="ngForm" (ngSubmit)="updateproductformsubmit()">
+       
+        <div class="form-group">
+          <label for="id">id:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.id" name="id" disabled>
+        </div>
+        <div class="form-group">
+          <label for="name">name:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.bookName" name="name">
+        </div>
+        <div class="form-group">
+          <label for="author">author:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.bookAuthor" name="author">
+        </div>
+        <div class="form-group">
+          <label for="edition">edition:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.bookEdition" name="edition">
+        </div>
+        <div class="form-group">
+          <label for="price">price:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.bookPrice" name="price">
+        </div>
+        <div class="form-group">
+          <label for="description">description:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.bookDescription" name="description">
+        </div>
+        <div class="form-group">
+          <label for="category">category:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.bookCategory" name="category">
+        </div>
+        <div class="form-group">
+          <label for="quantity">quantity:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.bookQuantity" name="quantity">
+        </div>
+        <div class="form-group">
+          <label for="qualityrating">qualityrating:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.bookQualityRating" name="qualityrating">
+        </div>
+        <div class="form-group">
+          <label for="contentrating">quantity:</label>
+          <input type="text" class="form-control" required [(ngModel)]="book.bookContentRating" name="contentrating">
+        </div>
+       
+        <button type="submit" class="btn btn-success">Update</button>
+        <button type="back" class="btn btn-primary" [routerLink]="['/productlist']" >Back</button>
+      </form>
+    </div>

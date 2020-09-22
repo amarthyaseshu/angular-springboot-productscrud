@@ -1,0 +1,32 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>book id</th>
+          <th>book name</th>
+          <th>book author</th>
+          <th>book edition</th>
+          <th>book price</th>
+          <th>book description</th>
+          <th>book category</th>
+          <th>book quantity</th>
+          <th>book quality rating</th>
+          <th>book content rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td>{{book.id}}</td>
+          <td>{{book.bookName}}</td>
+          <td>{{book.bookAuthor}}</td>
+          <td>{{book.bookEdition}}</td>
+          <td>{{book.bookPrice}}</td>
+          <td>{{book.bookDescription}}</td>
+          <td>{{book.bookCategory}}</td>
+          <td>{{book.bookQuantity}}</td>
+          <td>{{book.bookQualityRating}}</td>
+          <td>{{book.bookContentRating}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+  <button type="back" class="btn btn-primary" [routerLink]="['/productlist']" >Back</button>
