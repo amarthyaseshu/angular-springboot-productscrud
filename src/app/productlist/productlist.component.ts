@@ -18,6 +18,7 @@ export class ProductlistComponent implements OnInit {
 this._service.fetchProductListFromRemote().subscribe(
   data=>{console.log("response received");
 this.booklist=data;
+console.log(this.booklist);
 },
   error=>console.log("exception occured")
 )
@@ -34,7 +35,7 @@ this.booklist=data;
 }
 
 deleteProduct(id:number){
-  this._service.deleteProductByidFromRemote(id).subscribe(
+  this._service.deleteProductByIdFromRemote(id).subscribe(
     data=>{console.debug("deleted succesfully");
     this._route.navigate(['/productlist']);
   },

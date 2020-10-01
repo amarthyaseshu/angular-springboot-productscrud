@@ -14,6 +14,8 @@
           <th>book quantity</th>
           <th>book quality rating</th>
           <th>book content rating</th>
+          <th>book pickup details</th>
+          <th>book image</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -29,6 +31,8 @@
           <td>{{book.bookQuantity}}</td>
           <td>{{book.bookQualityRating}}</td>
           <td>{{book.bookContentRating}}</td>
+          <td>{{book.bookPickupDetails}}</td>
+          <td><img src="{{book.bookImageUrl}}" width="60px" height="60px" ></td>
           <td>
             <button type="button" class="btn btn-primary" (click)="goToEditProduct(book.id)">Edit</button>
             <button type="button" class="btn btn-info" (click)="goToViewProduct(book.id)">View</button>

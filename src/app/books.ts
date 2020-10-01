@@ -9,4 +9,6 @@ export class Books {
     bookQuantity:number;
     bookQualityRating:string;
     bookContentRating:string;
+    bookPickupDetails:string;
+    bookImageUrl:string;
 }

@@ -13,15 +13,33 @@ import { Router } from '@angular/router';
 export class AddproductComponent implements OnInit {
   book = new Books();
 
-  options: any = ['one', 'two', 'three'];
+  catOptions: any = ['Engineering','Medical', 'Competitive','Self-Development','Biographies','Computers And Tech','Entertainment','Literature And Fiction','SciFi And Fantasy','Travel','Others'];
+  contentROptions: any = ['1', '2', '3','4','5'];
+  qualityROptions: any = ['1', '2', '3','4','5'];
+
+
+
+
+
+
   constructor(private _route: Router, private _service: NgserviceService) {}
 
   ngOnInit(): void {}
 
+ 
   selectCat(tempCat: any): any {
     this.book.bookCategory = tempCat;
   }
-  addproductformsubmit() {
+
+  selectContentRating(tempContR: any): any {
+    this.book.bookContentRating = tempContR;
+  }
+
+  selectQualityRating(tempContR: any): any {
+    this.book.bookQualityRating = tempContR;
+  }
+
+  addProductFormSubmit() {
     this._service.addProductToRemote(this.book).subscribe(
       (data) => {
         console.log('data added succesfully');

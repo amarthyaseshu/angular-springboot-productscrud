@@ -16,7 +16,7 @@ export class ViewproductComponent implements OnInit {
 
   ngOnInit(): void {
     let id=parseInt(this._activatedRoute.snapshot.paramMap.get('id'));
-    this._service.fetchProductByidFromRemote(id).subscribe(
+    this._service.fetchProductByIdFromRemote(id).subscribe(
       data=>{console.log("data received");
     this.book=data;
     },
@@ -25,7 +25,5 @@ console.log("exception occured");
       }
     )
   }
-
- 
 
 }

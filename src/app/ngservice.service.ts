@@ -18,11 +18,11 @@ export class NgserviceService {
     return this._http.post<any>("http://localhost:8083/addbooks",book);
   }
 
-  fetchProductByidFromRemote(id:number):Observable<any>{
+  fetchProductByIdFromRemote(id:number):Observable<any>{
     return this._http.get<any>("http://localhost:8083/getbooksbyid/"+id);
   }
 
-  deleteProductByidFromRemote(id:number):Observable<any>{
+  deleteProductByIdFromRemote(id:number):Observable<any>{
     return this._http.delete<any>("http://localhost:8083/deletebooksbyid/"+id);
   }
   
